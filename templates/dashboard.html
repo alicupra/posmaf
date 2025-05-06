@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='C:\Users\MedAli\OneDrive\Desktop\pos_app\static\css\styles.css') }}">
+<div id="dashboard-screen" class="dashboard">
+    <div class="header">
+        <div class="header-logo">
+            <div class="logo">AL</div>
+            <div class="header-title">Système POS - Supermarché AL NOUR</div>
+        </div>
+        <div class="header-actions">
+            <button class="btn-icon">🔔</button>
+            <button class="btn-icon">👤</button>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav-item active">
+            <div class="nav-icon">📊</div>
+            <span>Dashboard</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">🛒</div>
+            <span>Vente</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">👥</div>
+            <span>Clients</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">📦</div>
+            <span>Stock</span>
+        </div>
+        <div class="nav-item">
+            <div class="nav-icon">⚙</div>
+            <span>Admin</span>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1 class="dashboard-header">TABLEAU DE BORD - APERÇU</h1>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-title">CA AUJOURD'HUI</div>
+                <div class="stat-value">12,450.00 MAD</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">VENTES DU JOUR</div>
+                <div class="stat-value">57 transactions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">PANIER MOYEN</div>
+                <div class="stat-value">218.42 MAD</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">ARTICLES VENDUS</div>
+                <div class="stat-value">143 unités</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

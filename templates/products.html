@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="products">
+    <h2>Manage Products</h2>
+    <a class="button" href="{{ url_for('add_product') }}">Add New Product</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ product.id }}</td>
+                <td>{{ product.name }}</td>
+                <td>${{ product.price }}</td>
+                <td>{{ product.stock }}</td>
+                <td>
+                    <a href="{{ url_for('edit_product', product_id=product.id) }}">Edit</a>
+                    <a href="{{ url_for('delete_product', product_id=product.id) }}" class="delete">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
